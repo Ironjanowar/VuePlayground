@@ -1,0 +1,28 @@
+<html>
+  <header>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </header>
+
+  <body id="chato" >
+    <div id="rooms" class="rooms">
+      <ul>
+        <li v-for="room in rooms" v-on:click="selectRoom(room)" >{{ room.name }}</li>
+      </ul>
+    </div>
+
+    <div id="title">
+      <h1>{{ selectedRoom.name }}</h1>
+    </div>
+
+    <div id="chat" >
+      <li>Chat here!</li>
+    </div>
+
+    <div id="input-text">
+      <input id="text-message" placeholder="Write your message..." v-on:keyup.13="putText" type="text" v-model="text" />
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

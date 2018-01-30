@@ -1,0 +1,41 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+    "rooms    title"
+    "rooms    chat"
+    "rooms    input-text";
+  grid-gap: 10px;
+}
+
+#rooms {
+  grid-area: rooms;
+  background-color: lightgrey;
+}
+
+#rooms ul {
+  margin-right: 1em;
+}
+
+#title {
+  grid-area: title;
+}
+
+#chat {
+  grid-area: chat;
+}
+
+#chat li {
+  list-style-type: none;
+}
+
+#input-text {
+  grid-area: input-text;
+}
+
+#input-text input {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
